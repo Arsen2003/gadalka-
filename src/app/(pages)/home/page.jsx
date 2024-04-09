@@ -9,11 +9,12 @@
     import forestImage from '../../assets/images/forest-image.png'
     import taroImage from '../../assets/images/tari-circle.png'
     import circleGold from '../../assets/images/circle-gold.png'
-    import { getCertificates, getPosts } from '@/app/posts/getPosts/getPosts'
+    import { getCertificates, getComments, getPosts } from '@/app/posts/getPosts/getPosts'
     import candleImage from './../../assets/images/candle-image.png'
     export default async function HomePage() {
       const posts =  await getPosts()
       const certificates = await getCertificates()
+      const comments = await getComments()
       const list = { hidden: { opacity: 0 } }
       const item = { hidden: { x: -10, opacity: 0 } }
 
@@ -340,16 +341,15 @@
             <h2>Отзывы</h2>
           </div>
           <section className={styles.reviews_section}>
-            <div className={styles.reviews_section_card}>
-              <div className={styles.reviews_section_card_header}>Ольга</div>
-              <p>
-                Расстались с моим парнем, но все равно меня не отпускали чувства
-                к нему, пробовала переключиться, но ничего не помогало. Дарья
-                очень четко озвучила мне решение проблемы, я сперва отнеслась с
-                недоверием, но в итоге все получилось, как она и сказала. Мы
-                дали отношениям второй шанс.
-              </p>
-            </div>
+            {comments.map((item) => (
+              <div key={item.id} className={styles.reviews_section_card}>
+                <div className={styles.reviews_section_card_header}> {item.name}</div>
+                <p>
+                 {item.text}
+                </p>
+              </div>
+            ))}
+
           </section>
           <section className={styles.certificates_section}>
             <h4>Сертификаты</h4>
