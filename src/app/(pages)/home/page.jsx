@@ -3,7 +3,6 @@
     import Image from 'next/image'
     import circleImage from '../../assets/images/image-circle.png'
     import goldWings from '../../assets/images/wings-gold.png'
-    import loveImage from '../../assets/images/love-image.png'
     import telegramImage from '../../assets/images/telegram-image.png'
     import whatsappImage from '../../assets/images/whatsapp-image.png'
     import forestImage from '../../assets/images/forest-image.png'
