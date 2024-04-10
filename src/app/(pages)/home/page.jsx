@@ -10,6 +10,11 @@
     import circleGold from '../../assets/images/circle-gold.png'
     import { getCertificates, getComments, getPosts } from '@/app/posts/getPosts/getPosts'
     import candleImage from './../../assets/images/candle-image.png'
+    import certificate1 from '../../assets/images/certificate-1.jpg'
+    import certificate2 from '../../assets/images/certificate-2.jpg'
+    import certificate3 from '../../assets/images/certificate-3.jpg'
+
+
     export default async function HomePage() {
       const posts =  await getPosts()
       const certificates = await getCertificates()
@@ -342,26 +347,35 @@
           <section className={styles.reviews_section}>
             {comments.map((item) => (
               <div key={item.id} className={styles.reviews_section_card}>
-                <div className={styles.reviews_section_card_header}> {item.name}</div>
-                <p>
-                 {item.text}
-                </p>
+                <div className={styles.reviews_section_card_header}>
+                  {' '}
+                  {item.name}
+                </div>
+                <p>{item.text}</p>
               </div>
             ))}
-
           </section>
           <section className={styles.certificates_section}>
             <h4>Сертификаты</h4>
             <div className={styles.certificates_section_content}>
-              {certificates.map((item) => (
-                <Image
-                  key={item.id}
-                  src={item.image}
-                  width={337}
-                  height={337}
-                  alt="certificates"
-                />
-              ))}
+              <Image
+                src={certificate1}
+                width={337}
+                height={337}
+                alt="certificates"
+              />
+              <Image
+                src={certificate2}
+                width={337}
+                height={337}
+                alt="certificates"
+              />
+              <Image
+                src={certificate3}
+                width={337}
+                height={337}
+                alt="certificates"
+              />
             </div>
           </section>
           <span className={styles.title}>
