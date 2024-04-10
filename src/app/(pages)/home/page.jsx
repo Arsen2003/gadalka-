@@ -10,9 +10,7 @@
     import circleGold from '../../assets/images/circle-gold.png'
     import { getCertificates, getComments, getPosts } from '@/app/posts/getPosts/getPosts'
     import candleImage from './../../assets/images/candle-image.png'
-    import certificate1 from '../../assets/images/certificate-1.jpg'
-    import certificate2 from '../../assets/images/certificate-2.jpg'
-    import certificate3 from '../../assets/images/certificate-3.jpg'
+
 
 
     export default async function HomePage() {
@@ -93,10 +91,10 @@
                 </span>
                 <a href="tel:+998901155162">ПОЗВОНИТЬ</a>
                 <div className={styles.hero_section_content_links}>
-                  <a href="">
+                  <a href="https://wa.me/998901155162">
                     <Image src={whatsappImage} alt="whatsapp-image" />
                   </a>
-                  <a href="">
+                  <a href="https://t.me/lili_klp">
                     <Image src={telegramImage} alt="telegram-image" />{' '}
                   </a>
                 </div>
@@ -358,24 +356,15 @@
           <section className={styles.certificates_section}>
             <h4>Сертификаты</h4>
             <div className={styles.certificates_section_content}>
-              <Image
-                src={certificate1}
-                width={337}
-                height={337}
-                alt="certificates"
-              />
-              <Image
-                src={certificate2}
-                width={337}
-                height={337}
-                alt="certificates"
-              />
-              <Image
-                src={certificate3}
-                width={337}
-                height={337}
-                alt="certificates"
-              />
+              {certificates.map((item) => (
+                <Image
+                  key={item.id}
+                  src={item.image}
+                  width={337}
+                  height={337}
+                  alt="certificates"
+                />
+              ))}
             </div>
           </section>
           <span className={styles.title}>

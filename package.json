@@ -11,13 +11,16 @@
   },
   "dependencies": {
     "framer-motion": "^11.0.25",
+    "i": "^0.3.7",
     "motion": "^10.17.0",
     "next": "14.1.4",
     "next-sitemap": "^4.2.3",
+    "npm": "^10.5.1",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.72.0",
-    "sass-loader": "^14.1.1"
+    "sass-loader": "^14.1.1",
+    "sharp": "^0.33.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
