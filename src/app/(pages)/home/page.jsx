@@ -17,7 +17,7 @@
       const posts =  await getPosts()
       const certificates = await getCertificates()
       const comments = await getComments()
-      const list = { hidden: { opacity: 0 } }
+      const list =  { hidden: { opacity: 0 } }
       const item = { hidden: { x: -10, opacity: 0 } }
 
 
