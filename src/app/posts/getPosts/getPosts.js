@@ -3,7 +3,9 @@
 
 export async function getPosts() {
   try {
-    const response = await fetch('http://46.101.131.147/services')
+    const response = await fetch('http://46.101.131.147/services', {
+      cache: 'no-store',
+    })
     const data = await response.json()
     console.log(response)
     return data
@@ -19,7 +21,9 @@ export async function getPosts() {
 
 export async function getCertificates() {
   try {
-    const response = await fetch('http://46.101.131.147/certificates')
+    const response = await fetch('http://46.101.131.147/certificates', {
+      cache: 'no-store',
+    })
     const data = await response.json()
     console.log(response)
     return data
@@ -32,7 +36,9 @@ export async function getCertificates() {
 
 export async function getComments() {
   try {
-    const response = await fetch('http://46.101.131.147/comments')
+    const response = await fetch('http://46.101.131.147/comments', {
+      cache: 'no-store',
+    })
     const data = await response.json()
     console.log(response)
     return data
